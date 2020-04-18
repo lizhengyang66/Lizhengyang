@@ -8,9 +8,10 @@ public class HelloWorld {
 	@RequestMapping("/hello")
 	@ResponseBody
 	public String showHello() {
-		System.out.println("---进入了Hello控制器-------");
+		System.out.println("---杩涘叆浜咹ello鎺у埗鍣�-------");
 		return"Hello World!";
 	}
-//测试12
+//娴嬭瘯12
 //zht
+	//李斌
 }
