@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>商品列表</title>
+</head>
+<body>
+	<table border="1" width="80%" align="center" cellspacing="0" cellpadding="0">
+		<tr>
+			<td>商品编号</td>
+			<td>商品名称</td>
+			<td>商品价格</td>
+			<td></td>
+		</tr>
+		<tr th:each=" goods:${list}">
+		<td th:text="${goods.id}"></td>
+		<td th:text="${goods.name}"></td>
+		<td th:text="${goods.price}"></td>
+		<td><img th:src="@{${goods.image}}"/></td>
+		<tr>
+	</table>
+</body>
+</html>
