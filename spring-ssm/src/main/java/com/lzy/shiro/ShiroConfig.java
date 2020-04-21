@@ -37,7 +37,7 @@ public class ShiroConfig {
 		 */
 		Map<String, String> filterMap=new LinkedHashMap<String, String>();
 		
-		//filterMap.put("/add", "authc");
+		filterMap.put("/add", "authc");
 		shiroFilterFactoryBean.setFilterChainDefinitionMap(filterMap);
 		return shiroFilterFactoryBean;
 		
