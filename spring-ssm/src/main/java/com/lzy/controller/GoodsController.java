@@ -22,4 +22,14 @@ public class GoodsController {
 		System.out.println("333");
 		return "goodsList";
 	}
+	@RequestMapping("/hello")
+	public String hello() {
+		return "test";
+		
+	}
+	@RequestMapping("/add")
+	public String login() {
+		System.out.println("1");
+		return"addgood";
+	}
 }
