@@ -24,7 +24,7 @@ public class UserRealm extends AuthorizingRealm{
 		//给资源进行授权
 		SimpleAuthorizationInfo info=new SimpleAuthorizationInfo();
 		//添加资源的授权字符串
-		info.addStringPermission("user:add");
+		//info.addStringPermission("user:add");
 		return null;
 	}
 	@Autowired

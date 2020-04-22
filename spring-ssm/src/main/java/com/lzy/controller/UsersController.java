@@ -72,13 +72,13 @@ public class UsersController {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 				//登录失败:用户名不存在
-				model.addAttribute("msg", "用户名不存在");
+				model.addAttribute("msg", "用户名或密码不正确");
 				return "login";
 			} catch (IncorrectCredentialsException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 				//登录失败:密码错误
-				model.addAttribute("msg", "密码错误");
+				model.addAttribute("msg", "用户名或密码不正确");
 				return "login";
 			}
 			

@@ -39,13 +39,9 @@ public class ShiroConfig {
 		Map<String, String> filterMap=new LinkedHashMap<String, String>();
 		//filterMap.put("/add", "authc");
 		//放行
-		 filterMap.put("/image/*", "anon");//img
-		 filterMap.put("/css/*", "anon");//css
-		 filterMap.put("/js/*", "anon");//js
 		filterMap.put("/gologin", "anon");
 		//放行login.html页面
 		filterMap.put("/login2", "anon");
-		filterMap.put("/*", "authc");
 		//filterMap.put("/hell", "anon");
 		//授权过滤器
 		//filterMap.put("/add", "perms[user:add]");
