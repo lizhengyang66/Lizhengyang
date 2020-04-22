@@ -27,8 +27,5 @@
   <properties>
   		<!-- 修改jdk为1.8 -->
   		<java.version>1.8</java.version>
-  		<!-- 修改thymeleaf的版本 -->
-  		<thymeleaf.version>3.0.2.RELEASE</thymeleaf.version>
-  		<thymeleaf-layout-dialet.version>2.0.4</thymeleaf-layout-dialet.version>
   </properties>
 </project>

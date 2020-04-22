@@ -35,10 +35,6 @@ public class ShiroConfig {
 		 * perms:该资源必须得到资源权限才可以访问
 		 * role：该资源必须得到角色权限才可以访问
 		 */
-		Map<String, String> filterMap=new LinkedHashMap<String, String>();
-		
-		filterMap.put("/add", "authc");
-		shiroFilterFactoryBean.setFilterChainDefinitionMap(filterMap);
 		return shiroFilterFactoryBean;
 		
 	}
@@ -48,7 +44,7 @@ public class ShiroConfig {
 	 * 创建DefaultWebSecurityManager
 	 */
 	@Bean(name="securityManager")
-	public DefaultWebSecurityManager getDefaultWebSecurityManager(@Qualifier("securityManager")UserRealm userRealm) {
+	public DefaultWebSecurityManager getDefaultWebSecurityManager(@Qualifier("userRealm")UserRealm userRealm) {
 		DefaultWebSecurityManager securityManager=new DefaultWebSecurityManager();
 		//关联realm
 		securityManager.setRealm(userRealm);
@@ -59,8 +55,8 @@ public class ShiroConfig {
 	/**
 	 * 创建Realm
 	 */
-	@Bean
-	public UserRealm realm() {
+	@Bean(name="userRealm")
+	public UserRealm getRealm() {
 		return new UserRealm();
 		
 	}
