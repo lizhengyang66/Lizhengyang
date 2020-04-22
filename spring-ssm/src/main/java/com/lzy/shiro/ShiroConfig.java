@@ -35,6 +35,10 @@ public class ShiroConfig {
 		 * perms:该资源必须得到资源权限才可以访问
 		 * role：该资源必须得到角色权限才可以访问
 		 */
+		Map<String, String> filterMap=new LinkedHashMap<String, String>();
+		
+		filterMap.put("/add", "authc");
+		shiroFilterFactoryBean.setFilterChainDefinitionMap(filterMap);
 		return shiroFilterFactoryBean;
 		
 	}
