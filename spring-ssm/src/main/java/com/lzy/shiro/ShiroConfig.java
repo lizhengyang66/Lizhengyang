@@ -35,9 +35,26 @@ public class ShiroConfig {
 		 * perms:该资源必须得到资源权限才可以访问
 		 * role：该资源必须得到角色权限才可以访问
 		 */
+		//shiro过滤器
 		Map<String, String> filterMap=new LinkedHashMap<String, String>();
-		
-		filterMap.put("/add", "authc");
+		//filterMap.put("/add", "authc");
+		//放行
+		 filterMap.put("/image/*", "anon");//img
+		 filterMap.put("/css/*", "anon");//css
+		 filterMap.put("/js/*", "anon");//js
+		filterMap.put("/gologin", "anon");
+		//放行login.html页面
+		filterMap.put("/login2", "anon");
+		filterMap.put("/*", "authc");
+		//filterMap.put("/hell", "anon");
+		//授权过滤器
+		//filterMap.put("/add", "perms[user:add]");
+		//拦截
+		filterMap.put("/*", "authc");
+		//修改跳转的页面
+		shiroFilterFactoryBean.setLoginUrl("/gologin");
+		//设置未授权提示页面
+		//shiroFilterFactoryBean.setUnauthorizedUrl("/noAuth");
 		shiroFilterFactoryBean.setFilterChainDefinitionMap(filterMap);
 		return shiroFilterFactoryBean;
 		
