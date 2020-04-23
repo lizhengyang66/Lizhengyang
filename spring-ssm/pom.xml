@@ -44,6 +44,14 @@
   		<artifactId>shiro-spring</artifactId>
   		<version>1.4.0</version>
   	</dependency>
+  	<!-- DevTools 工具 热部署 -->
+  	<dependency>
+  	<groupId>org.springframework.boot</groupId>
+  	<artifactId>spring-boot-devtools</artifactId>
+  	<optional>true</optional>
+  	</dependency>
+  	
+  	
   </dependencies>
   <!--修改配置参数  -->
   <properties>

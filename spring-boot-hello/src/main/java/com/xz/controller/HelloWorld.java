@@ -15,7 +15,16 @@ public class HelloWorld {
 //娴嬭瘯12
 //zht
 //李斌
+<<<<<<< HEAD
 //姚文斌22
 //1
 //席蒋达123
+=======
+//姚文彬
+private void sysout() {
+	// TODO Auto-generated method stub
+System.out.println("卢本伟牛逼！！！！");
+String name="刘 海 文";
+}
+>>>>>>> refs/remotes/origin/LhwGood
 }
